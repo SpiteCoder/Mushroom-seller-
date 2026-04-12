@@ -63,18 +63,8 @@ flutter:
 ---
 
 ## 📄 File 2 — `lib/main.dart`
-
-```dart
-import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
-import 'screens/home_screen.dart';
-
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
   runApp(const MushroomSellerApp());
 }
 
@@ -89,7 +79,6 @@ class MushroomSellerApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF4E7C59),
-          brightness: Brightness.light,
         ),
         useMaterial3: true,
         inputDecorationTheme: InputDecorationTheme(
@@ -97,21 +86,25 @@ class MushroomSellerApp extends StatelessWidget {
           fillColor: const Color(0xFFF0F7F2),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
-            borderSide: const BorderSide(color: Color(0xFF4E7C59), width: 1.5),
+            borderSide:
+                const BorderSide(color: Color(0xFF4E7C59), width: 1.5),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
-            borderSide: const BorderSide(color: Color(0xFFA8D5B5), width: 1.5),
+            borderSide:
+                const BorderSide(color: Color(0xFFA8D5B5), width: 1.5),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
-            borderSide: const BorderSide(color: Color(0xFF4E7C59), width: 2.5),
+            borderSide:
+                const BorderSide(color: Color(0xFF4E7C59), width: 2.5),
           ),
           labelStyle: const TextStyle(
             color: Color(0xFF4E7C59),
             fontWeight: FontWeight.w600,
           ),
-          contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
@@ -122,9 +115,7 @@ class MushroomSellerApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
             ),
             textStyle: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-            ),
+                fontSize: 18, fontWeight: FontWeight.w700),
           ),
         ),
         appBarTheme: const AppBarTheme(
@@ -138,21 +129,11 @@ class MushroomSellerApp extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        cardTheme: CardTheme(
-          elevation: 4,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          color: Colors.white,
-        ),
       ),
       home: const HomeScreen(),
     );
   }
 }
-```
-
----
 
 ## 📄 File 3 — `lib/firebase_options.dart`
 
