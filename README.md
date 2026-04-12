@@ -63,6 +63,10 @@ flutter:
 ---
 
 ## 📄 File 2 — `lib/main.dart`
+
+import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MushroomSellerApp());
@@ -134,7 +138,6 @@ class MushroomSellerApp extends StatelessWidget {
     );
   }
 }
-
 ## 📄 File 3 — `lib/firebase_options.dart`
 
 > ⚠️ This is a placeholder. You MUST replace it after running `flutterfire configure` in Codespaces.
